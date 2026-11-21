@@ -1,0 +1,35 @@
+# Synthetic illustration only. This is not a platform case or a real scientific claim.
+@prefix this: <https://example.org/np/synthetic-demo-001/> .
+@prefix ex: <https://example.org/vocab/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+this:Head {
+  this: a np:Nanopublication ;
+    np:hasAssertion this:assertion ;
+    np:hasProvenance this:provenance ;
+    np:hasPublicationInfo this:pubinfo .
+}
+
+this:assertion {
+  ex:methodQ ex:has-lower-mean-error-than ex:methodP .
+  ex:methodQ ex:claimText "Synthetic illustration: Method Q has a lower mean error than Method P under the stated example conditions."@en .
+}
+
+this:provenance {
+  this:assertion prov:wasDerivedFrom <https://example.org/paper/synthetic-study> ;
+    ex:hasEvidence [
+      a ex:Evidence ;
+      ex:relation "supports" ;
+      ex:excerpt "[Synthetic example passage only; not a real quotation.]"@en ;
+      ex:locator "PDF p. 5 (synthetic), Results, paragraph 1, sentence 2" .
+    ] .
+}
+
+this:pubinfo {
+  this: dct:creator <https://example.org/agent/synthetic-curator> ;
+    dct:created "2026-01-01T00:00:00Z"^^xsd:dateTime ;
+    ex:exampleStatus "synthetic illustration only"@en .
+}

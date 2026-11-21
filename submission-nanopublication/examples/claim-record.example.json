@@ -1,0 +1,34 @@
+{
+  "example_status": "synthetic illustration only; not a platform case or scientific finding",
+  "claim_id": "ex-claim-001",
+  "claim_text": "In the synthetic example, Method Q has a lower mean measurement error than Method P in the stated sample.",
+  "claim_kind": "author_result",
+  "subject": "https://example.org/method/Q",
+  "predicate": "https://example.org/ontology/has-lower-mean-error-than",
+  "object": "https://example.org/method/P",
+  "qualifiers": {
+    "population": "synthetic example sample only",
+    "conditions": ["paired comparison", "one laboratory"],
+    "statistics": "effect size and uncertainty are not supplied in this illustration"
+  },
+  "source": {
+    "source_id": "https://example.org/paper/synthetic-study",
+    "title": "Synthetic Example Study",
+    "authors": [],
+    "year": null,
+    "doi": null,
+    "metadata_status": "illustrative placeholder values; not a real paper"
+  },
+  "evidence": [
+    {
+      "evidence_id": "ex-ev-001",
+      "relation": "supports",
+      "excerpt": "[Synthetic example passage: Method Q had a lower mean error than Method P in this sample.]",
+      "locator": "PDF p. 5 (synthetic), Results, paragraph 1, sentence 2",
+      "evidence_mode": "direct_text",
+      "note": "Placeholder excerpt illustrates the field; verify against an actual source before making a claim."
+    }
+  ],
+  "confidence_basis": "illustrative only; no source was supplied",
+  "uncertainty": ["This example is fabricated solely to demonstrate structure and must not be reused as evidence."]
+}
