@@ -1,0 +1,22 @@
+{
+  "schema_version": "evidence-graph/v1",
+  "example_status": "synthetic fixture only; not a scientific result or platform case",
+  "sources": [
+    {"source_id":"paper-A","doi":null,"title":"Synthetic Paper A","authors":[],"year":null},
+    {"source_id":"paper-B","doi":null,"title":"Synthetic Paper B","authors":[],"year":null}
+  ],
+  "nodes": [
+    {"id":"A:method-q","type":"method","label":"Method Q","source_ids":["paper-A"],"evidence":[{"source_id":"paper-A","paragraph_id":"p-A-1","quote":"[Synthetic example: we applied Method Q.]","role":"describes"}]},
+    {"id":"A:task-x","type":"task","label":"Task X","source_ids":["paper-A"],"evidence":[{"source_id":"paper-A","paragraph_id":"p-A-1","quote":"[Synthetic example: Method Q was applied to Task X.]","role":"mentions"}]},
+    {"id":"B:method-q","type":"method","label":"Method Q","source_ids":["paper-B"],"evidence":[{"source_id":"paper-B","paragraph_id":"p-B-2","quote":"[Synthetic example: Method Q was used in a distinct setting.]","role":"describes"}]},
+    {"id":"B:task-y","type":"task","label":"Task Y","source_ids":["paper-B"],"evidence":[{"source_id":"paper-B","paragraph_id":"p-B-2","quote":"[Synthetic example: this study addressed Task Y.]","role":"mentions"}]}
+  ],
+  "edges": [
+    {"id":"A:e1","subject":"A:method-q","predicate":"applies_to","object":"A:task-x","source_id":"paper-A","qualifiers":{"setting":"synthetic A setting"},"evidence":[{"source_id":"paper-A","paragraph_id":"p-A-1","quote":"[Synthetic example: Method Q was applied to Task X.]"}]},
+    {"id":"B:e1","subject":"B:method-q","predicate":"applies_to","object":"B:task-y","source_id":"paper-B","qualifiers":{"setting":"synthetic B setting"},"evidence":[{"source_id":"paper-B","paragraph_id":"p-B-2","quote":"[Synthetic example: Method Q was used in a distinct setting for Task Y.]"}]}
+  ],
+  "alignments": [
+    {"status":"candidate_unresolved","node_ids":["A:method-q","B:method-q"],"rationale":"The surface labels match in this synthetic fixture, but identity of implementation is not established.","evidence":[{"source_id":"paper-A","paragraph_id":"p-A-1","quote":"[Synthetic label occurrence in A.]"},{"source_id":"paper-B","paragraph_id":"p-B-2","quote":"[Synthetic label occurrence in B.]"}]}
+  ],
+  "uncertainties": ["All records and quotations are synthetic placeholders."]
+}

@@ -1,0 +1,5 @@
+[
+  {"id":"q1","kind":"nodes_by_type","node_type":"method","source_id":"paper-A"},
+  {"id":"q2","kind":"edges_by_predicate","predicate":"applies_to","source_id":"paper-B"},
+  {"id":"q3","kind":"alignments_by_status","status":"candidate_unresolved"}
+]
